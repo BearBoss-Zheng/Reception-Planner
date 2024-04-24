@@ -8,7 +8,7 @@ spring:
     name: Reception Planner
 
   datasource:
-    url:  jdbc:mysql://${datasource.host}:${datasource.port}/reception?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url:  jdbc:mysql://${datasource.host}:${datasource.port}/${datasource.database_name}?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${datasource.username}
     password: ${datasource.password}
