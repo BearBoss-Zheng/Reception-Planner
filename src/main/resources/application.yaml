@@ -1,0 +1,29 @@
+server:
+  port: ${server.port}
+
+spring:
+  config:
+    import: classpath:application_custom.yaml
+  application:
+    name: Reception Planner
+
+  datasource:
+    url:  jdbc:mysql://${datasource.host}:${datasource.port}/reception?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${datasource.username}
+    password: ${datasource.password}
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    root: info
+    org.springframework.web: debug
+    com.your_package: debug
+
+file:
+  save:
+    path: ${file.save.path}

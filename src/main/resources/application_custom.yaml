@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+datasource:
+  host: 192.168.152.101 #mysql的ip
+  port: 3306  # mysql的端口号
+  username: root  # mysql的root
+  password: 123   # mysql的pwd
+
+file:
+  save:
+    path: C:\Users\27416\Desktop\filepath   # 文件保存地址
